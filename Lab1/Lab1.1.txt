@@ -1,0 +1,148 @@
+1. Study following object oriented concepts
+1.Object: 
+Object-oriented programming, or OOP programming, is a programming technique where all the practical logic and requirements are built around objects.
+During the time the application runs, the methods of this object will be called.
+In the real world, objects are entities that exist with states and behaviors.
+Ex: ClassName ReferenceVariable = new ClassName();
+
+2.Class: The set of objects is called the class.
+Ex: class <class_name>{  
+    field;  
+    method;  
+  }
+
+3. Instantiation of object (creating an object): is the method to create a new object of a class with its own attribute and method from the class
+Ex: Book book1 = new Book("A Tale of Two Cities", 1859);
+    Book book2 = new Book("Moby Dick", 1851);
+    Book book3 = new Book("Unknown");
+    System.out.println(book1.getTitle()); // Output: A Tale of Two Cities
+    System.out.println(book2.getTitle()); // Output: Moby Dick
+    System.out.println(book3.getPubYear()); // Output: -1
+    Book.showCount(); // Output: count = 3
+
+4. Visibility (public / private / protected):
+    private: Only code in the same class with member can access member.
+    public: Any code in any class in any package can access the member.
+    protected: Any code in the same class or its subclasses can access the member. 
+Ex: class Book
+{
+   // fields
+
+   private String title;
+   private int pubYear; // publication year
+
+   // ...
+}
+
+
+5. Member datas / methods: An arbitrary method declaration begins with the static keyword (for non-entity behavior) and continues with returnType, followed by an indentifier that does not specify the name of the method.
+Ex: class Book
+{
+   // ...
+
+   String getTitle()
+   {
+      return title;
+   }
+
+   int getPubYear()
+   {
+      return pubYear;
+   }
+
+   void setTitle(String _title)
+   {
+      title = _title;
+   }
+
+   void setPubYear(int _pubYear)
+   {
+      pubYear = _pubYear;
+   }
+}
+
+6. Inheritance: When an object is retransmitted all the properties and methods of the parent object are called inheritance. 
+Inheritance helps reuse the source code. It is used for polymorphism at runtime.
+Ex: class Employee {
+    float salary = 1000;
+}
+ 
+class Programmer extends Employee {
+    int bonus = 150;
+}
+ 
+public class InheritanceSample1 {
+    public static void main(String args[]) {
+        Programmer p = new Programmer();
+        System.out.println("Programmer salary is: " + p.salary);
+        System.out.println("Bonus of Programmer is: " + p.bonus);
+    }
+}
+Result: Programmer salary is: 1000.0
+Bonus of Programmer is: 150
+
+7. Interface: is a collection of abstract methods. 
+A class implements an interface, thus inheriting the abstract methods of the interface.
+Ex: public interface ParentCar {
+        public void changeGear( int newValue);
+
+        public void speedUp(int increment);
+   
+        public void applyBrakes(int decrement);
+}
+
+8. Polymorphism: There are two types of polymorphism in java: compile polymorphism and runtime polymorphism. 
+We can implement polymorphism in java by overloading the method and overriding the method.
+Ex: class Bike {
+    void run() {
+        System.out.println("running");
+    }
+}
+ 
+public class Splender extends Bike {
+    void run() {
+        System.out.println("running safely with 60km");
+    }
+ 
+    public static void main(String args[]) {
+        Bike b = new Splender();// upcasting
+        b.run();
+    }
+}
+Result: running safely with 60km
+
+9. Overriding:means that there are 2 methods with the same name and parameters. One method is in the parent class, and the other is in the child class. 
+Overriding allows subclasses to be able to implement separately for the methods provided by the parent class.
+Ex: public class Student extends Person {
+	
+	public String universityName;
+
+	public Student(String name, int age, float height, String universityName) {
+		super(name, age, height);
+		this.universityName = universityName;
+	}
+	
+
+	public void getInfo() {
+		super.getInfo();
+		System.out.println("University Name:"+this.universityName);
+	}
+	
+}
+
+10.Abstract classes: A class declared with the abstract keyword is an abstract class in Java. 
+The abstract class means that the abstract class can have abstract or non-abtract methods.
+Ex: abstract class Bike{  
+  abstract void run();  
+}  
+class Honda4 extends Bike{  
+    void run() {
+        System.out.println("running safely..");
+    }
+ 
+    public static void main(String args[]) {  
+        Bike obj = new Honda4();  
+        obj.run();  
+    }  
+}  
+Result: running safely..

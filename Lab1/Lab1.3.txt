@@ -1,0 +1,40 @@
+3. Study Android fundamental concepts
+1. What programming languages you can use for Android app development?
+C ++: This is the most appropriate and powerful programming language when building mobile applications for Android and Windows - primarily for low-level programming, it remains the foundation language for application developers on mobile. 
+Being a powerful programming language, inheriting the advantages of the C programming language, C ++ allows mobile applications to be developed for any purpose on any platform that exists. 
+It may not be classy or trendy, but it has dominated the programming world even before the smartphone revolution.
+C # :is everything about Java without any bad parts, better programmed from all the top improvements. Microsoft saw the potential of Java and decided to create a better version of itself.
+The Java programming language is one of the most preferred languages ​​when developing Android applications. An object-oriented programming language developed at Sun Microsystems (now owned by Oracle), 
+Java can run in two different ways: in the browser window, or in a virtual machine can be done without Browser.
+
+2. What is .apk file?
+Apk stands for Android Package Kit, which is the package file format used by the Android operating system for distributing and installing mobile applications. 
+Like the Windows operating system on a PC that uses an .exe file to install software, the apk is similar for Android.
+When you download the apk online, you will basically get an app. Most users receive apps from the Google Play Store, but in some cases apk files become necessary.
+
+3. How Android system runs apps?
+A process called Zygote is used to launch the app. Zygote is an incomplete version of an Android process–its memory space contains all the core libraries that are needed by any app, but it doesn’t yet include any of the code that’s specific to a particular app.
+Zygote creates a copy of itself using the fork system call. Android is a Linux system, and the fork call can duplicate a process like Zygote very quickly. 
+This is the reason Zygote process is used: it’s a lot faster to duplicate an half-started process like Zygote, than it is to load a new process from the main system files. Zygote means your app launches faster.
+
+4. Name four types of Android components. Describe each.
+4.1. Activity - is similar to the concept of Window (Window or Form) in Windows operating systems. When starting an application, an Activity is always called, showing the application's interface screen that allows the user to interact.
+4.2. Service - Android hidden component. The service is used to update data, give alerts (notifications) and is never displayed to the user
+- For example, when you request to play a song, there will be a Service running below to play the song. When you download a file, there will be a download tasked Serive
+4.3. Content Provider - Shared data warehouse, used to manage and share data between applications
+- For example: user information stored in contacts, data stored on SQL Lite, data stored in news feeds
+4.4. Intent - Used to transmit messages to initialize an Activity or Service to perform the job you want
+- For example, when opening a web page, you will send an intent to create a new Activity displaying that website
+
+5. What is manifest file and what is its purpose?
+To use the components we want, before activating them, we need to Declare them. All of these declarations are stored in a file, that is, the Manifest file.
+In addition to helping declare the components to be used in the application, the Manifest file is also where you declare other purposes such as:
+Registration of user permissions, Specifies the Minimum Required SDK, Specifies the hardware and software features that our application wants to use, and a number of external libraries.
+
+6. What are resources? Why they are needed?
+In Android programming, there is a clear distinction between resource and source code. If the source code is Java code, then the resource is the remaining files unrelated to the Java code, such as image files, audio, video, text files, colors, etc. and even the activity_main file. .xml
+Default resource is the resource by default. Because these resources will be displayed according to the machine's default designation.
+Use: If you have an image, or an audio file, or a text, and you don't need to distinguish them between different devices on the market, then you can leave these files at the default resource.
+Alternative resources are the resources that you are the one who must tell the system when to use which resource, which is to choose the resource you want.
+Use: The specific formula for alternative resource is as follows:
+<default_resource> - <config_qualifier>

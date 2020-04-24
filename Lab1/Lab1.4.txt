@@ -1,0 +1,3 @@
+4. Android UI
+The first thing with the User interface in the xml file is to create a layout for mainactivity with linear layout, button , text editor and text view.
+In Mainactivity we create a string that contains list of countries' name, then we create a array adapter to push the string into the array, finally we set the array to list in the layout with setAdapter function.
