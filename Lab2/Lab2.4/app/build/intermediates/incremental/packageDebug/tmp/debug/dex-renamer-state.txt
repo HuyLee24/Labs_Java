@@ -1,0 +1,7 @@
+#Sat Apr 25 17:05:08 EEST 2020
+base.0=C\:\\Users\\Admin\\Labs_Java\\Lab2\\Lab2.4\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\Admin\\Labs_Java\\Lab2\\Lab2.4\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
